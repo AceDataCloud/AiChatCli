@@ -29,7 +29,7 @@ class TestGlobalCommands:
     def test_version_uses_distribution_name(self, monkeypatch):
         monkeypatch.setattr(
             "aichat_cli.main.metadata.version",
-            lambda name: "1.2.3" if name == "acedatacloud-aichat-cli" else None,
+            lambda name: "1.2.3" if name == "aichat-pro-cli" else None,
         )
 
         assert get_version() == "1.2.3"
